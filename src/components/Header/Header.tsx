@@ -23,12 +23,21 @@ function Header() {
         <Box fontSize="24px" color="primary" fontWeight="bold">
           <Link to="/">
             <i>
-              <Box as="span">looter_ Swap</Box>
+              <Box as="span">|dethSwap|</Box>
             </i>
           </Link>
-          {/* <Link to="/pools">
-            <Box as="span" fontSize="18px" color="primary">&nbsp;Pools</Box>
-          </Link> */}
+          <Link to="/pools">
+            <Box as="span" fontSize="18px" color="primary">&nbsp;&nbsp;&nbsp;Pools</Box>
+          </Link>
+          <Link to="/stake">
+            <Box as="span" fontSize="18px" color="primary">&nbsp;&nbsp;&nbsp;Stake</Box>
+          </Link>
+          <Link to="/info">
+            <Box as="span" fontSize="18px" color="primary">&nbsp;&nbsp;&nbsp;Info</Box>
+          </Link>
+          <Link to="/info">
+            <Box as="span" fontSize="18px" color="primary">&nbsp;&nbsp;&nbsp;Discord</Box>
+          </Link>
         </Box>
         {!wallet.account && (
           <Box ml="auto">

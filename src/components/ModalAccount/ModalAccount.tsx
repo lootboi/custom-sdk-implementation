@@ -78,7 +78,7 @@ function ModalAccount(props: ModalAccountProps) {
           as="p"
           mt="60px"
           fontSize={{ base: "14px", xl: "18px" }}
-          color="#0DE6FF"
+          color="#secondary"
           textAlign="center"
         >
           {wallet.account}

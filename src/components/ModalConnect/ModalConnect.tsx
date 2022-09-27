@@ -121,7 +121,7 @@ function ModalConnect(props: ModalConnectProps) {
         px="30px"
         position="relative"
         as="header"
-        bg="#61D9FA"
+        bg="#a6a6a695"
         minHeight="70px"
         display="flex"
         alignItems="center"
@@ -129,7 +129,7 @@ function ModalConnect(props: ModalConnectProps) {
         <Box
           fontSize="24px"
           lineHeight="28px"
-          color="#0D285A"
+          color="primary"
           as="h2"
           fontWeight={700}
         >
@@ -139,14 +139,14 @@ function ModalConnect(props: ModalConnectProps) {
           onClick={onClose}
           ml="auto"
           as="button"
-          color="#212B54"
+          color="#22222280"
           fontSize="20px"
         >
           <Close />
         </Box>
       </Box>
       <Box
-        bg="#1C264E"
+        bg="#a6a6a695"
         borderBottomRightRadius="24px"
         borderBottomLeftRadius="24px"
       >

@@ -6,7 +6,7 @@ const theme = extendTheme({
       body: {
         color: "#f1f1f2",
         fontFamily: `Source Code Pro, monospace`,
-        bg: `url("https://64.media.tumblr.com/b84c3c27c8cd2a228939d05ff9eede4e/tumblr_ogpnhjTn1P1re6nxeo1_500.gifv")`,
+        bg: `url("https://www.theanimedaily.com/wp-content/uploads/2022/05/Skeleton-Knight-In-Another-World-Episode-8-j.jpg")`,
         bgSize: "cover",
         "& .chakra-alert__desc": {
           color: "#1A202C",
