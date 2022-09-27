@@ -22,7 +22,7 @@ function Home() {
       <Box as="section" py="50px">
         <AppContainer>
           <Box maxWidth="700px" mx="auto" px="16px">
-            <Box as="p">
+            {/* <Box as="p">
               This website was built to give an example with the package{" "}
               <Box
                 textDecoration="underline"
@@ -43,28 +43,31 @@ function Home() {
                 here
               </Box>
               .
-            </Box>
-            <Box as="p">
+            </Box> */}
+            {/* <Box as="p">
               The website uses <strong>PancakeSwap (BSC)</strong>,{" "}
               <strong>QuickSwap (Polygon)</strong> and{" "}
               <strong>Trader Joe (Avalanche)</strong> liquidity pools to give an
               example token swapping. <br /> Because the website is used for
               demo purposes so the code might not always stay updated with the
               development of both platforms. Use with caution.
-            </Box>
+            </Box> */}
           </Box>
 
-          <Box
-            mt="16px"
-            display="flex"
-            justifyContent="center"
-            as="h1"
-            fontSize="32px"
-            fontWeight="bold"
-          >
-            Swap{" "}
-            <Box ml="8px" width="40px" as="img" src={logos[wallet.chainId]} />
-          </Box>
+          <i>
+            <Box
+              mt="16px"
+              display="flex"
+              justifyContent="center"
+              as="h1"
+              fontSize="32px"
+              fontWeight="bold"
+              color="#222222"
+            >
+              Swap
+              {/* <Box ml="8px" width="40px" as="img" src={logos[wallet.chainId]} /> */}
+            </Box>
+          </i>
           <Box mt="32px" maxWidth="500px" mx="auto">
             <SwapBoard />
           </Box>

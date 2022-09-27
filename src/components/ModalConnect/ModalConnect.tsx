@@ -27,10 +27,34 @@ const networks = [
     icon: `${config.PUBLIC_URL}images/icon/avax.svg`,
     chainId: chain.avax,
   },
+  {
+    name: "Optimism Goerli",
+    icon: `${config.PUBLIC_URL}images/icon/optimism.svg`,
+    chainId: chain.ogoerli,
+  },
+  {
+    name: "Optimism",
+    icon: `${config.PUBLIC_URL}images/icon/optimism.svg`,
+    chainId: chain.optimism,
+  },
 ];
 
 const wallets = {
   [chain.avax]: [
+    {
+      name: "Metamask",
+      icon: `${config.PUBLIC_URL}images/icon/metamask-fox.svg`,
+      connector: "injected",
+    },
+  ],
+  [chain.ogoerli]: [
+    {
+      name: "Metamask",
+      icon: `${config.PUBLIC_URL}images/icon/metamask-fox.svg`,
+      connector: "injected",
+    },
+  ],
+  [chain.optimism]: [
     {
       name: "Metamask",
       icon: `${config.PUBLIC_URL}images/icon/metamask-fox.svg`,

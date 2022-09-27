@@ -184,7 +184,7 @@ function ModalSelectToken(props: ModalSelectTokenProps) {
       <Box
         borderRadius="30px"
         color="#fff"
-        bg="#212B54"
+        bg="#222222"
         maxWidth="600px"
         width="100%"
         minHeight="300px"

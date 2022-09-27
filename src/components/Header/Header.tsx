@@ -18,12 +18,17 @@ function Header() {
   }
 
   return (
-    <Box as="header" borderBottom="2px solid #1c274f" color="#f1f1f2" py="16px">
+    <Box as="header" borderBottom="2px solid #222222" color="#f1f1f2" py="16px">
       <AppContainer display="flex" alignItems="center">
         <Box fontSize="24px" color="primary" fontWeight="bold">
           <Link to="/">
-            <Box as="span">Multi Chain TM</Box>
+            <i>
+              <Box as="span">looter_ Swap</Box>
+            </i>
           </Link>
+          {/* <Link to="/pools">
+            <Box as="span" fontSize="18px" color="primary">&nbsp;Pools</Box>
+          </Link> */}
         </Box>
         {!wallet.account && (
           <Box ml="auto">

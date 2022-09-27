@@ -8,6 +8,8 @@ export const ROUTERS: { [chainId: number]: string } = {
   [SupportedChainId.BSC]: config.PANCAKE_ROUTER,
   [SupportedChainId.MATIC]: config.QUICK_SWAP_ROUTER,
   [SupportedChainId.AVAX]: config.TRADER_JOE_ROUTER,
+  [SupportedChainId.OPTIMISMGOERLI]: config.DETH_SWAP_ROUTER,
+  [SupportedChainId.OPTIMISM]: config.DETH_SWAP_MAINNET_ROUTER,
 };
 
 type ChainTokenList = {
@@ -18,6 +20,10 @@ const WETH_ONLY: ChainTokenList = {
   [SupportedChainId.MATIC]: [WETH9_EXTENDED[SupportedChainId.MATIC]],
   [SupportedChainId.BSC]: [WETH9_EXTENDED[SupportedChainId.BSC]],
   [SupportedChainId.AVAX]: [WETH9_EXTENDED[SupportedChainId.AVAX]],
+  [SupportedChainId.OPTIMISMGOERLI]: [
+    WETH9_EXTENDED[SupportedChainId.OPTIMISMGOERLI],
+  ],
+  [SupportedChainId.OPTIMISM]: [WETH9_EXTENDED[SupportedChainId.OPTIMISM]],
 };
 
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
@@ -49,6 +55,13 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     BASE_TOKENS[SupportedChainId.AVAX].DAIe,
     BASE_TOKENS[SupportedChainId.AVAX].USDCe,
   ],
+  [SupportedChainId.OPTIMISMGOERLI]: [
+    ...WETH_ONLY[SupportedChainId.OPTIMISMGOERLI],
+    BASE_TOKENS[SupportedChainId.OPTIMISMGOERLI].dETH,
+    BASE_TOKENS[SupportedChainId.OPTIMISMGOERLI].WBTC,
+    BASE_TOKENS[SupportedChainId.OPTIMISMGOERLI].OPP,
+    BASE_TOKENS[SupportedChainId.OPTIMISMGOERLI].Velo,
+  ],
 };
 
 export const ADDITIONAL_BASES: {
@@ -57,6 +70,8 @@ export const ADDITIONAL_BASES: {
   [SupportedChainId.BSC]: {},
   [SupportedChainId.MATIC]: {},
   [SupportedChainId.AVAX]: {},
+  [SupportedChainId.OPTIMISMGOERLI]: {},
+  [SupportedChainId.OPTIMISM]: {},
 };
 
 export const CUSTOM_BASES: {
@@ -65,6 +80,8 @@ export const CUSTOM_BASES: {
   [SupportedChainId.BSC]: {},
   [SupportedChainId.MATIC]: {},
   [SupportedChainId.AVAX]: {},
+  [SupportedChainId.OPTIMISMGOERLI]: {},
+  [SupportedChainId.OPTIMISM]: {},
 };
 
 export const FEES_NUMERATORS: {
@@ -73,6 +90,8 @@ export const FEES_NUMERATORS: {
   [SupportedChainId.BSC]: JSBI.BigInt(9975),
   [SupportedChainId.MATIC]: JSBI.BigInt(997),
   [SupportedChainId.AVAX]: JSBI.BigInt(997),
+  [SupportedChainId.OPTIMISMGOERLI]: JSBI.BigInt(997),
+  [SupportedChainId.OPTIMISM]: JSBI.BigInt(997),
 };
 
 export const FEES_DENOMINATORS: {
@@ -81,4 +100,6 @@ export const FEES_DENOMINATORS: {
   [SupportedChainId.BSC]: JSBI.BigInt(10000),
   [SupportedChainId.MATIC]: JSBI.BigInt(1000),
   [SupportedChainId.AVAX]: JSBI.BigInt(1000),
+  [SupportedChainId.OPTIMISMGOERLI]: JSBI.BigInt(1000),
+  [SupportedChainId.OPTIMISM]: JSBI.BigInt(1000),
 };

@@ -158,6 +158,66 @@ export const BASE_TOKENS = {
       "USD Coin"
     ),
   },
+  [SupportedChainId.OPTIMISMGOERLI]: {
+    WBTC: new Token(
+      SupportedChainId.OPTIMISMGOERLI,
+      "0x16d8928c26E9575F8e6ee2aa27231D02a115De07",
+      8,
+      "WBTC",
+      "Wrapped BTC"
+    ),
+    dETH: new Token(
+      SupportedChainId.OPTIMISMGOERLI,
+      "0x36BfD9Ea653e02A05a4e0295C45677734c9ab97C",
+      18,
+      "dETH",
+      "dETH"
+    ),
+    Velo: new Token(
+      SupportedChainId.OPTIMISMGOERLI,
+      "0x5Fba98EC955b817A76b62d4B73907c7EA2ee66eB",
+      18,
+      "VELO",
+      "VELO"
+    ),
+    OPP: new Token(
+      SupportedChainId.OPTIMISMGOERLI,
+      "0xdeaE6cF2C4216Cd5bf5C258c686FC5584BcB8C30",
+      18,
+      "OPP",
+      "OPP"
+    ),
+  },
+  [SupportedChainId.OPTIMISM]: {
+    WBTC: new Token(
+      SupportedChainId.OPTIMISM,
+      "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
+      8,
+      "WBTC",
+      "Wrapped BTC"
+    ),
+    dETH: new Token(
+      SupportedChainId.OPTIMISM,
+      "0x39d36cF934aAE9Fcf4c5112648a016B8A7127B35",
+      18,
+      "dETH",
+      "dETH"
+    ),
+    Velo: new Token(
+      SupportedChainId.OPTIMISM,
+      "0x3c8B650257cFb5f272f799F5e2b4e65093a11a05",
+      18,
+      "VELO",
+      "VELO"
+    ),
+    OPP: new Token(
+      SupportedChainId.OPTIMISM,
+      "0x676f784d19c7F1Ac6C6BeaeaaC78B02a73427852",
+      18,
+      "OPP",
+      "OPP"
+    ),
+  },
 };
 
 export const ETHER_TOKEN_LIST: { [chainId: number]: TokenListDetail } = {
@@ -188,6 +248,24 @@ export const ETHER_TOKEN_LIST: { [chainId: number]: TokenListDetail } = {
     logoURI: `${config.PUBLIC_URL}images/icon/tokens/avax.svg`,
     isNative: true,
   },
+  [SupportedChainId.OPTIMISMGOERLI]: {
+    chainId: SupportedChainId.OPTIMISMGOERLI,
+    symbol: "ETH",
+    name: "ETH Token",
+    decimals: 18,
+    address: "",
+    logoURI: `${config.PUBLIC_URL}images/icon/tokens/eth.svg`,
+    isNative: true,
+  },
+  [SupportedChainId.OPTIMISM]: {
+    chainId: SupportedChainId.OPTIMISM,
+    symbol: "ETH",
+    name: "ETH Token",
+    decimals: 18,
+    address: "",
+    logoURI: `${config.PUBLIC_URL}images/icon/tokens/eth.svg`,
+    isNative: true,
+  },
 };
 
 export const WETH9_EXTENDED: { [chainId: number]: Token } = {
@@ -211,6 +289,20 @@ export const WETH9_EXTENDED: { [chainId: number]: Token } = {
     18,
     "WAVAX",
     "Wrapped AVAX"
+  ),
+  [SupportedChainId.OPTIMISMGOERLI]: new Token(
+    SupportedChainId.OPTIMISMGOERLI,
+    "0x4200000000000000000000000000000000000006",
+    18,
+    "WETH",
+    "Wrapped Ether"
+  ),
+  [SupportedChainId.OPTIMISM]: new Token(
+    SupportedChainId.OPTIMISM,
+    "0x4200000000000000000000000000000000000006",
+    18,
+    "WETH",
+    "Wrapped Ether"
   ),
 };
 

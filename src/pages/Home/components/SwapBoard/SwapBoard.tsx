@@ -43,6 +43,8 @@ const TokenLists: { [chainId: number]: string } = {
     "https://tokens.pancakeswap.finance/pancakeswap-extended.json",
   [SupportedChainId.AVAX]:
     "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/joe.tokenlist.json",
+  [SupportedChainId.OPTIMISM]:
+    "https://static.optimism.io/optimism.tokenlist.json",
 };
 
 function SwapBoard() {
@@ -379,22 +381,24 @@ function SwapBoard() {
           </Box>
         </Box>
         <Box mt="24px">
-          <InputToken
-            onMax={handleMax}
-            showMaxButton={showMaxButton}
-            disabled={isExecuting || isApproving || swap.isSwapping}
-            inputProps={{
-              value: formattedAmounts[Field.INPUT],
-            }}
-            onUserInput={handleInput}
-            selectedToken={swapState[Field.INPUT]}
-            selectTokenProps={{
-              onClick: handleOpenSelectToken(Field.INPUT),
-            }}
-            label="From"
-            id="from"
-            balance={selectedCurrencyBalances[Field.INPUT].formatted}
-          />
+          <i>
+            <InputToken
+              onMax={handleMax}
+              showMaxButton={showMaxButton}
+              disabled={isExecuting || isApproving || swap.isSwapping}
+              inputProps={{
+                value: formattedAmounts[Field.INPUT],
+              }}
+              onUserInput={handleInput}
+              selectedToken={swapState[Field.INPUT]}
+              selectTokenProps={{
+                onClick: handleOpenSelectToken(Field.INPUT),
+              }}
+              label="From"
+              id="from"
+              balance={selectedCurrencyBalances[Field.INPUT].formatted}
+            />
+          </i>
         </Box>
         <Box mt="24px" display="flex" justifyContent="center">
           <Box
@@ -411,20 +415,22 @@ function SwapBoard() {
           </Box>
         </Box>
         <Box mt="24px">
-          <InputToken
-            disabled={isExecuting || isApproving || swap.isSwapping}
-            inputProps={{
-              value: formattedAmounts[Field.OUTPUT],
-            }}
-            onUserInput={handleOutput}
-            selectedToken={swapState[Field.OUTPUT]}
-            selectTokenProps={{
-              onClick: handleOpenSelectToken(Field.OUTPUT),
-            }}
-            label="To"
-            id="to"
-            balance={selectedCurrencyBalances[Field.OUTPUT].formatted}
-          />
+          <i>
+            <InputToken
+              disabled={isExecuting || isApproving || swap.isSwapping}
+              inputProps={{
+                value: formattedAmounts[Field.OUTPUT],
+              }}
+              onUserInput={handleOutput}
+              selectedToken={swapState[Field.OUTPUT]}
+              selectTokenProps={{
+                onClick: handleOpenSelectToken(Field.OUTPUT),
+              }}
+              label="To"
+              id="to"
+              balance={selectedCurrencyBalances[Field.OUTPUT].formatted}
+            />
+          </i>
         </Box>
         <Box
           mt="24px"

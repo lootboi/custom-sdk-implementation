@@ -45,14 +45,14 @@ export default function InputToken(props: InputTokenProps) {
   }
 
   return (
-    <Box background="#000829" px="16px" py="16px">
+    <Box background="#22222245" px="16px" py="16px">
       <Box display="flex">
         <Box as="label" fontWeight={500} htmlFor={id} display="block">
           {label}
         </Box>
         {balance && (
           <Box ml="auto" as="p">
-            Balance:{" "}
+            <i>Balance: </i>
             <Box as="strong" color="primary">
               {balance}
             </Box>
@@ -92,7 +92,7 @@ export default function InputToken(props: InputTokenProps) {
             display="flex"
             alignItems="center"
           >
-            {!selectedToken && "Select a token"}
+            <i>{!selectedToken && "Select"}</i>
             {selectedToken && (
               <Box display="flex" alignItems="center">
                 <Box fontSize="26px" height="26px" width="26px" mr="4px">

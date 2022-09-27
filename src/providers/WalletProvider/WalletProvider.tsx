@@ -121,6 +121,10 @@ function WalletProvider(props: { children?: React.ReactNode }) {
         setEtherSymbol("AVAX");
         break;
       }
+      case chain.optimism: {
+        setEtherSymbol("ETH");
+        break;
+      }
       default: {
         setEtherSymbol("ETH");
       }
@@ -153,6 +157,12 @@ function WalletProvider(props: { children?: React.ReactNode }) {
         }
         case chain.avax: {
           setProvider(new JsonRpcProvider(config.AVAX_RPC_URL, chain.avax));
+          break;
+        }
+        case chain.optimism: {
+          setProvider(
+            new JsonRpcProvider(config.OPTIMISM_RPC_URL, chain.optimism)
+          );
           break;
         }
       }
